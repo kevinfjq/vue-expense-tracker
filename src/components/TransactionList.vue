@@ -2,6 +2,12 @@
 const props = defineProps({
   transactions: Array,
 })
+
+const emit = defineEmits(['transactionDeleted']);
+
+const deleteTransaction = (id) => {
+  emit('transactionDeleted', id);
+}
 </script>
 
 <template>
@@ -11,7 +17,7 @@ const props = defineProps({
         v-for="transaction in transactions"
         :class="transaction.amount < 0 ? 'minus' : 'plus'"
     >
-      {{ transaction.text }} <span>{{transaction.amount}}</span><button class="delete-btn">x</button>
+      {{ transaction.text }} <span>{{transaction.amount}}</span><button @click="deleteTransaction(transaction.id)" class="delete-btn">x</button>
     </li>
   </ul>
 </template>
