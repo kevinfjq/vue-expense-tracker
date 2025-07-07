@@ -58,7 +58,7 @@ The application provides a clean, intuitive interface for tracking your income a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/kevinfjq/parking-control.git
+   git clone https://github.com/kevinfjq/vue-expense-tracker.git
    cd vue-expense-tracker
    ```
 
